@@ -24,5 +24,9 @@ python -c "import flask; print('Flask installed successfully')"
 # 8. Check project folder
 ls -la
 
+nano app.py
+
+nano templates/index.html
+
 # 9. Start application
 python app.py

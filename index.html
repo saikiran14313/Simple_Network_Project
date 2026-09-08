@@ -1,0 +1,848 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>PRASANNA - Come, Relive India</title>
+
+    <style>
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            color: #333;
+            background: white;
+        }
+
+        /* TOP OFFER */
+
+        .offer {
+            height: 40px;
+            background: #9b1728;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+        }
+
+        /* TOP LINKS */
+
+        .top-links {
+            height: 42px;
+            padding: 0 30px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            color: #8b1727;
+            border-bottom: 1px solid #eee;
+        }
+
+        /* MAIN HEADER */
+
+        .header {
+            height: 110px;
+            display: flex;
+            align-items: center;
+            padding: 0 50px;
+            background: #fffafa;
+            border-bottom: 1px solid #eee;
+        }
+
+        /* LOGO */
+
+        .logo {
+            width: 40%;
+            text-align: center;
+        }
+
+        .logo h1 {
+            margin: 0;
+            font-family: Georgia, serif;
+            font-size: 52px;
+            letter-spacing: 3px;
+            color: #8d1727;
+        }
+
+        .logo p {
+            margin: 0;
+            font-family: Georgia, serif;
+            font-size: 16px;
+            font-style: italic;
+            color: #c55b63;
+        }
+
+        /* SEARCH */
+
+        .search {
+            width: 330px;
+            height: 52px;
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            background: white;
+            display: flex;
+            align-items: center;
+        }
+
+        .search input {
+            flex: 1;
+            height: 100%;
+            border: none;
+            outline: none;
+            padding: 12px 15px;
+            font-size: 17px;
+        }
+
+        .search button {
+            width: 55px;
+            height: 100%;
+            border: none;
+            background: white;
+            font-size: 22px;
+            cursor: pointer;
+        }
+
+        /* PROFILE WISHLIST BAG */
+
+        .actions {
+            display: flex;
+            gap: 30px;
+            margin-left: 35px;
+        }
+
+        .action {
+            text-align: center;
+            font-size: 15px;
+        }
+
+        .icon {
+            display: block;
+            font-size: 30px;
+            margin-bottom: 3px;
+        }
+
+        /* NAVIGATION */
+
+        .navigation {
+            height: 55px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 25px;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .navigation a {
+            color: #333;
+            text-decoration: none;
+            font-size: 17px;
+        }
+
+        .sale {
+            background: #c43750;
+            color: white !important;
+            padding: 5px 9px;
+            border-radius: 3px;
+        }
+
+        /* BREADCRUMB */
+
+        .breadcrumb {
+            margin: 25px 70px 15px;
+            color: #66788f;
+            font-size: 17px;
+        }
+
+        /* PRODUCT AREA */
+
+        .product {
+            display: flex;
+            gap: 45px;
+            margin: 0 70px 60px;
+        }
+
+        /* IMAGE */
+
+        .image-section {
+            width: 50%;
+            display: flex;
+            justify-content: center;
+        }
+
+        .main-image {
+            width: 500px;
+            height: 620px;
+            border: 1px solid #eee;
+            border-radius: 8px;
+            overflow: hidden;
+            background: white;
+        }
+
+        .main-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+
+        /* DETAILS */
+
+        .details {
+            width: 50%;
+            padding-top: 10px;
+        }
+
+        .wishlist {
+            float: right;
+            font-size: 36px;
+            color: #b3162d;
+            cursor: pointer;
+        }
+
+        .product-name {
+            font-size: 22px;
+            margin-bottom: 20px;
+        }
+
+        .price {
+            font-size: 32px;
+            font-weight: bold;
+        }
+
+        .discount {
+            color: #159447;
+            font-size: 21px;
+            font-weight: bold;
+            margin-left: 15px;
+        }
+
+        .mrp {
+            color: #777;
+            margin-top: 12px;
+            font-size: 18px;
+        }
+
+        .tax {
+            color: #777;
+            margin-top: 8px;
+        }
+
+        /* BUTTONS */
+
+        .buttons {
+            display: flex;
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .add {
+            flex: 1;
+            height: 58px;
+            background: white;
+            color: #8d1727;
+            border: 2px solid #8d1727;
+            border-radius: 6px;
+            font-size: 17px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .buy {
+            flex: 1;
+            height: 58px;
+            background: #8d1727;
+            color: white;
+            border: 2px solid #8d1727;
+            border-radius: 6px;
+            font-size: 17px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        /* COUPON */
+
+        .coupon {
+            margin-top: 25px;
+            padding: 25px;
+            border: 1px solid #eee;
+            border-radius: 10px;
+            color: #d03b50;
+            font-size: 17px;
+        }
+
+        /* OFFERS */
+
+        .offers {
+            margin-top: 20px;
+            padding: 22px;
+            border: 1px solid #eee;
+            border-radius: 10px;
+        }
+
+        .offers-title {
+            color: #159447;
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        .offers-text {
+            color: #159447;
+            margin-top: 15px;
+        }
+
+        /* DELIVERY */
+
+        .delivery {
+            margin-top: 30px;
+        }
+
+        .delivery h3 {
+            font-size: 20px;
+        }
+
+        .pincode {
+            display: flex;
+            width: 400px;
+            height: 48px;
+            border: 1px solid #ddd;
+            border-radius: 7px;
+            overflow: hidden;
+        }
+
+        .pincode input {
+            flex: 1;
+            border: none;
+            outline: none;
+            padding: 10px;
+            font-size: 16px;
+        }
+
+        .check {
+            width: 80px;
+            border: none;
+            background: #8d1727;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        /* COLLECTION */
+
+        .collection {
+            background: #fafafa;
+            padding: 45px;
+            text-align: center;
+        }
+
+        .collection h2 {
+            color: #8d1727;
+            font-size: 30px;
+        }
+
+        .card {
+            width: 300px;
+            margin: auto;
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 3px 12px #ddd;
+            text-align: left;
+        }
+
+        .card img {
+            width: 100%;
+            height: 400px;
+            object-fit: contain;
+        }
+
+        .card-content {
+            padding: 15px;
+        }
+
+        .card-name {
+            font-size: 18px;
+        }
+
+        .card-price {
+            color: #8d1727;
+            font-size: 22px;
+            font-weight: bold;
+        }
+
+        .card-mrp {
+            color: #888;
+            text-decoration: line-through;
+            margin-left: 8px;
+        }
+
+        .card-button {
+            width: 100%;
+            padding: 12px;
+            background: #8d1727;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        /* FOOTER */
+
+        footer {
+            background: #8d1727;
+            color: white;
+            text-align: center;
+            padding: 25px;
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+<!-- OFFER -->
+
+<div class="offer">
+
+    Use PRASANNA150 to avail flat ₹150 off
+    + Extra discounts on Prepaid orders
+
+</div>
+
+
+<!-- TOP LINKS -->
+
+<div class="top-links">
+
+    <span>Contact Us</span>
+    <span>|</span>
+
+    <span>7 Day Returns</span>
+    <span>|</span>
+
+    <span>Track Order</span>
+    <span>|</span>
+
+    <span>Return Order</span>
+    <span>|</span>
+
+    <span>Sell On Prasanna</span>
+
+</div>
+
+
+<!-- HEADER -->
+
+<div class="header">
+
+
+    <!-- LOGO -->
+
+    <div class="logo">
+
+        <h1>PRASANNA</h1>
+
+        <p>come, relive india</p>
+
+    </div>
+
+
+    <!-- SEARCH -->
+
+    <div class="search">
+
+        <input
+            type="text"
+            placeholder="Search here"
+        >
+
+        <button>
+            🔍
+        </button>
+
+    </div>
+
+
+    <!-- ACTIONS -->
+
+    <div class="actions">
+
+        <div class="action">
+
+            <span class="icon">♙</span>
+
+            Profile
+
+        </div>
+
+
+        <div class="action">
+
+            <span class="icon">♡</span>
+
+            Wishlist
+
+        </div>
+
+
+        <div class="action">
+
+            <span class="icon">🛍</span>
+
+            Bag
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- NAVIGATION -->
+
+<div class="navigation">
+
+    <a href="/">New</a>
+
+    <a href="/">Sarees</a>
+
+    <a href="/">Lehengas</a>
+
+    <a href="/">Salwar Kameez</a>
+
+    <a href="/">Kurtis</a>
+
+    <a href="/">Jewellery</a>
+
+    <a href="/">Kids</a>
+
+    <a href="/">Men</a>
+
+    <a href="/">Navratri</a>
+
+    <a href="/" class="sale">Sale</a>
+
+    <a href="/">Wedding</a>
+
+    <a href="/">Festive</a>
+
+    <a href="/" class="sale">Sale</a>
+
+    <a href="/">Luxe</a>
+
+    <a href="/">Fusion</a>
+
+</div>
+
+
+<!-- BREADCRUMB -->
+
+<div class="breadcrumb">
+
+    Home &gt; Women &gt; Sarees &gt; Blue Sarees &gt;
+
+    <b>Blue Designer Saree</b>
+
+</div>
+
+
+<!-- PRODUCT -->
+
+<div class="product">
+
+
+    <!-- IMAGE -->
+
+    <div class="image-section">
+
+        <div class="main-image">
+
+            <img
+                src="{{ products[0].image }}"
+                alt="Blue Saree"
+            >
+
+        </div>
+
+    </div>
+
+
+    <!-- DETAILS -->
+
+    <div class="details">
+
+
+        <div class="wishlist">
+
+            ♡
+
+        </div>
+
+
+        <div class="product-name">
+
+            {{ products[0].name }}
+
+        </div>
+
+
+        <div>
+
+            <span class="price">
+
+                ₹{{ products[0].price }}
+
+            </span>
+
+
+            <span class="discount">
+
+                40% OFF
+
+            </span>
+
+        </div>
+
+
+        <div class="mrp">
+
+            MRP
+
+            <s>
+                ₹{{ products[0].mrp }}
+            </s>
+
+        </div>
+
+
+        <div class="tax">
+
+            inclusive of all taxes
+
+        </div>
+
+
+        <!-- BUTTONS -->
+
+        <div class="buttons">
+
+            <button
+                class="add"
+                onclick="addBag()"
+            >
+
+                ADD TO BAG
+
+            </button>
+
+
+            <button
+                class="buy"
+                onclick="buyNow()"
+            >
+
+                BUY NOW
+
+            </button>
+
+        </div>
+
+
+        <!-- COUPON -->
+
+        <div class="coupon">
+
+            Use <b>PRASANNA150</b> to avail flat ₹150 off
+            + Extra discounts on Prepaid orders
+
+        </div>
+
+
+        <!-- OFFERS -->
+
+        <div class="offers">
+
+            <div class="offers-title">
+
+                🎁 Offers
+
+            </div>
+
+            <div class="offers-text">
+
+                Special 4% off on Online Payment
+
+            </div>
+
+        </div>
+
+
+        <!-- DELIVERY -->
+
+        <div class="delivery">
+
+            <h3>
+
+                Check Delivery
+
+            </h3>
+
+
+            <div class="pincode">
+
+                <input
+                    type="text"
+                    placeholder="Enter Pincode"
+                    maxlength="6"
+                    id="pincode"
+                >
+
+                <button
+                    class="check"
+                    onclick="checkPin()"
+                >
+
+                    Check
+
+                </button>
+
+            </div>
+
+
+            <p id="message"></p>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- COLLECTION -->
+
+<div class="collection">
+
+    <h2>💙 Blue Saree Collection</h2>
+
+    <p>Elegant sarees for every occasion</p>
+
+
+    <div class="card">
+
+        <img
+            src="{{ products[0].image }}"
+            alt="Blue Saree"
+        >
+
+
+        <div class="card-content">
+
+            <div class="card-name">
+
+                {{ products[0].name }}
+
+            </div>
+
+
+            <p>
+
+                <span class="card-price">
+
+                    ₹{{ products[0].price }}
+
+                </span>
+
+
+                <span class="card-mrp">
+
+                    ₹{{ products[0].mrp }}
+
+                </span>
+
+            </p>
+
+
+            <button
+                class="card-button"
+                onclick="addBag()"
+            >
+
+                ADD TO BAG
+
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+    <h2>PRASANNA</h2>
+
+    <p>Come, Relive India</p>
+
+    <p>© 2026 PRASANNA</p>
+
+</footer>
+
+
+<script>
+
+function addBag() {
+
+    alert("Blue Saree added to Bag!");
+
+}
+
+
+function buyNow() {
+
+    alert("Thank you for shopping with PRASANNA!");
+
+}
+
+
+function checkPin() {
+
+    let pin =
+        document.getElementById("pincode").value;
+
+    let message =
+        document.getElementById("message");
+
+
+    if (pin.length == 6 && !isNaN(pin)) {
+
+        message.innerHTML =
+            "✓ Delivery available at this pincode";
+
+        message.style.color = "green";
+
+    } else {
+
+        message.innerHTML =
+            "Please enter a valid 6-digit pincode";
+
+        message.style.color = "red";
+
+    }
+
+}
+
+</script>
+
+
+</body>
+
+</html>

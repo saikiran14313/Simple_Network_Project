@@ -1,0 +1,28 @@
+# 1. Go to home directory
+cd ~
+
+# 2. Create project
+mkdir -p prasanna-shop/templates
+cd prasanna-shop
+
+# 3. Install Python virtual environment
+sudo apt update
+sudo apt install python3-venv -y
+
+# 4. Create virtual environment
+python3 -m venv venv
+
+# 5. Activate virtual environment
+source venv/bin/activate
+
+# 6. Install Flask
+pip install flask
+
+# 7. Check Flask
+python -c "import flask; print('Flask installed successfully')"
+
+# 8. Check project folder
+ls -la
+
+# 9. Start application
+python app.py
